@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+
+.orange_top {
+    background-color: rgb(218, 100, 32);
+    display: flex;
+    position: relative;
+    padding: 10px 20px;
+    text-align: center;
+    height: 10px;
+}
+.sale {
+    display: flex;
+    flex-direction: row;
+    margin-left: 40%;
+    font-size: 12px;
+}
+.sale a 
+{
+   font-weight: bold;
+    color: black;
+    font-size: 12px;
+}
+
+ .track a{
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+}
+
+.track{
+    display: flex;
+   position: absolute;
+   right: 30px;
+   top: 20%;
+    flex-direction: row;
+    margin-left:20px ;
+ 
+}
+.header{
+    display: flex;
+    flex-direction:row;
+    padding:20px 20px;
+    justify-content: space-between;
+    height: 30px;
+    position: sticky;
+}
+
+.header ul li {
+    margin: 10px;
+    
+}
+.menu ul {
+    display: flex; 
+    list-style-type: none;
+}
+.menu ul li a  {
+    text-decoration: none;
+    color: black;
+    margin-left: 10px;
+}
+.icon-menu ul li a  {
+    text-decoration: none;
+    color: black;
+}
+.logo img{
+    width: 25%;
+}
+
+
+.icon-menu ul {
+    display: flex; 
+    list-style-type:none ;
+
+}
+.icon-menu ul li a i{
+    width: 20px;
+    font-size: 20px;
+}
+
+
+.collage img {
+    width: 100%;
+    height: 100%;
+}
+.discount img{
+    width: 100%;
+    height: 100%;
+    padding-bottom:20px;
+}
+.bottom{
+    display: flex;
+    padding: 13px 30px;
+    justify-content: space-between;
+    background: rgba(255, 180, 131, .08);
+}
+.shipping , .crafted, .stories{
+    display: flex;
+    align-items: center;
+}
+.shipping{
+    padding-left: 12%;
+}
+.shipping i , .crafted i, .stories i{
+   font-size: 120%;
+   margin-right: 30px;
+   border: 2px dashed #e18941;
+   border-radius:100% ;
+   padding: 16px;
+}
+.help{
+    display: flex;
+    padding: 1% 30% 1% 19.4%;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid  rgb(238, 231, 231);
+    border-bottom: 1px solid  rgb(238, 231, 231);
+
+}
+.phone{
+    display: flex;
+    font-size: 100%;
+}
+ .mail{
+    display: flex;
+    font-size: 120%;
+}
+.phone  i, .mail i{
+   margin-right: 20px;
+}
+.social-menu{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px 20px;
+    line-height: 160%;
+}
+.social-menu h4{
+    line-height: 400%;
+}
+.icon-menu i{
+    font-size: 180%;
+    margin-right: 10%;
+}
+.icon-menu input{
+border: none;
+}
+.input{
+    border-bottom: 1px solid rgb(221, 215, 215);
+    margin-top: 20px;
+    position: relative;
+    width: 130%;
+}
+.input button{
+color: white;
+background-color: rgb(47, 45, 45);
+padding: 6px 8px;
+margin-bottom: 2%;
+border-radius: 20px;
+font-weight: bolder;
+font-size: 75%;
+margin-left: 76%;
+}
+
+label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #999;
+    transition: 0.3s ease;
+    pointer-events: none;
+    cursor: pointer;
+    left: 0;
+}
+input:focus {
+    outline: none;
+}
+input:focus + label,
+        input:not(:placeholder-shown) + label {
+            top: -10px;
+            font-size: 12px;
+            color: #727171;
+            left: 0;
+        }
+        .footer img{
+            width: 8%;
+            margin-right:3% ;
+        }
+        .footer{
+            display: flex;
+            justify-content: space-evenly;
+            
+        }
+        .copy-rights{
+            display: flex;
+        padding-left: 10%;
+        align-items: center
+        }
+        .visa{
+            padding-left: 10.7%;
+           padding-right: 15%;
+           line-height: 300%;
+        }
+        .visa i{
+            font-size:200%;
+            margin-left: 7%;
+            margin-right: 5%;
+        }
+       
