@@ -1,0 +1,19 @@
+Project Title: Basic Calculator
+Semester: 1
+Description:
+This project is a simple calculator application developed in Java. It allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division. The user interface is designed using Swing, providing a user-friendly experience. The main features include:
+- Input fields for two numbers
+- Buttons for each arithmetic operation
+- Display area for results
+- Error handling for invalid inputs, such as division by zero
+- Clear button to reset inputs and results
+
+Technologies Used:
+- Java
+- Swing (for GUI)
+- JDK 11
+
+Key Learnings:
+- Understanding of Java GUI programming
+- Implementation of basic arithmetic logic
+- Error handling in user input
