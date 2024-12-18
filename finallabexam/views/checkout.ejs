@@ -1,0 +1,32 @@
+<h1>Checkout</h1>
+<form action="/checkout" method="POST">
+  <input type="hidden" name="cartItems" id="cartItems" />
+  <input type="hidden" name="totalAmount" id="totalAmount" />
+
+  <div>
+    <label for="customerName">Name:</label>
+    <input type="text" id="customerName" name="customerName" required />
+  </div>
+  <div>
+    <label for="street">Street:</label>
+    <input type="text" id="street" name="street" required />
+  </div>
+  <div>
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" required />
+  </div>
+  <div>
+    <label for="postalCode">Postal Code:</label>
+    <input type="text" id="postalCode" name="postalCode" required />
+  </div>
+  <button type="submit">Place Order</button>
+</form>
+
+<script>
+  // Populate hidden fields with cart data
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const totalAmount = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+  document.getElementById("cartItems").value = JSON.stringify(cart);
+  document.getElementById("totalAmount").value = totalAmount;
+</script>

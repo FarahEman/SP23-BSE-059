@@ -1,0 +1,25 @@
+<h1>Orders</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Order ID</th>
+      <th>Customer Name</th>
+      <th>Address</th>
+      <th>Total Amount</th>
+      <th>Order Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% orders.forEach(order => { %>
+      <tr>
+        <td><%= order._id %></td>
+        <td><%= order.customerName %></td>
+        <td>
+          <%= order.address.street %>, <%= order.address.city %>, <%= order.address.postalCode %>
+        </td>
+        <td>$<%= order.totalAmount %></td>
+        <td><%= order.orderDate.toLocaleString() %></td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>

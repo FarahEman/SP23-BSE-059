@@ -51,10 +51,10 @@
         </form>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
+            <a class="nav-link" href="/login">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Cart</a>
+            <a class="nav-link" href="/cart">Cart</a>
           </li>
         </ul>
       </div>
@@ -116,7 +116,33 @@
     <section class="categories container my-5">
       <div class="row">
         <!-- Women's Wear -->
-        <div class="col-md-4 mb-4">
+        
+          <!-- Women's Wear -->
+         <!-- Product Card -->
+<div class="col-md-4 mb-4">
+  <div class="card category-card">
+    <img
+      src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw550ad598/images/hi-res/ess24600b_green_1.jpg?sw=400&sh=600"
+      class="card-img-top category-img"
+      alt="Women"
+    />
+    <div class="card-body text-center">
+      <h5 class="card-title">Women's Wear</h5>
+      <button 
+        class="btn btn-warning" 
+        data-bs-toggle="modal" 
+        data-bs-target="#productModal" 
+        data-product-id="1"
+        data-product-name="Women's Wear"
+        data-product-price="500"
+        data-product-description="High-quality women's wear."
+      >
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</div>
+
           <div class="card category-card">
             <img
               src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw550ad598/images/hi-res/ess24600b_green_1.jpg?sw=400&sh=600"
@@ -193,5 +219,29 @@
 
     <!-- Bootstrap Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const addToCartButton = document.querySelector('.btn-warning');
+addToCartButton.addEventListener('click', function(event) {
+  event.preventDefault();
+
+  const productId = this.getAttribute('data-product-id');
+  const quantity = 1;  // You can modify this based on the quantity input field
+
+  fetch('/cart/add', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ productId, quantity })
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+    // Optionally update the cart UI here
+  })
+  .catch(error => console.error('Error:', error));
+});
+
+    </script>
   </body>
 </html>
