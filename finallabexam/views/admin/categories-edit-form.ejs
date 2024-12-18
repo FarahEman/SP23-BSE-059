@@ -1,0 +1,53 @@
+<h4>Edit Category</h4>
+
+<form action="/admin/categories/edit/<%= category._id %>" method="post" enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="nameInput">Name</label>
+    <input
+      name="name"
+      type="text"
+      class="form-control"
+      id="nameInput"
+      placeholder="Enter Category Name"
+      value="<%= category.name %>"
+      required
+    />
+    <small id="nameHelp" class="form-text text-muted">Category Name</small>
+  </div>
+  
+  <div class="form-group">
+    <label for="descriptionInput">Description</label>
+    <textarea
+      name="description"
+      class="form-control"
+      id="descriptionInput"
+      placeholder="Enter Category Description"
+      required
+    >
+      <%= category.description %>
+    </textarea>
+    <small id="descriptionHelp" class="form-text text-muted">Brief details about the category.</small>
+  </div>
+  
+  <div class="form-group">
+    <label for="imageInput">Image</label>
+    <input
+      name="image"
+      type="file"
+      class="form-control"
+      id="imageInput"
+      accept="image/*"
+    />
+    <small id="imageHelp" class="form-text text-muted">Choose an image to represent the category (optional).</small>
+    <% if (category.image) { %>
+      <div class="mt-2">
+        <img src="<%= category.image %>" alt="<%= category.name %>" style="width: 100px; height: 100px;" />
+        <small>Current Image</small>
+      </div>
+    <% } %>
+  </div>
+
+  <div class="form-group">
+    <button class="btn btn-info" type="submit">Edit Category</button>
+  </div>
+</form>

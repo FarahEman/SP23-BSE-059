@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%- pageTitle %></title>
+</head>
+<body>
+  <h1><%- pageTitle %></h1>
+
+  <!-- Search Form -->
+  <form action="/admin/categories" method="GET">
+    <input type="text" name="search" placeholder="Search" value="<%= search %>" />
+    <button type="submit">Search</button>
+  </form>
+
+  <!-- Categories Table -->
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Image</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% categories.forEach(category => { %>
+        <tr>
+          <td><%= category._id %></td>
+          <td><%= category.name %></td>
+          <td><%= category.description %></td>
+          <td>
+            <% if (category.image) { %>
+              <img src="<%= category.image %>" alt="<%= category.name %>" style="width: 100px;" />
+            <% } else { %>
+              No Image
+            <% } %>
+          </td>
+          <td>
+            <a href="/admin/categories/edit/<%= category._id %>">Edit</a>
+          </td>
+          <td>
+            <a href="/admin/categories/delete/<%= category._id %>">Delete</a>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+
+  <!-- Pagination -->
+  <div class="pagination">
+    <% for (let i = 1; i <= totalPages; i++) { %>
+      <a href="/admin/categories?page=<%= i %>&search=<%= search %>&sortBy=<%= sortBy %>&sortOrder=<%= sortOrder %>"><%= i %></a>
+    <% } %>
+  </div>
+</body>
+</html>

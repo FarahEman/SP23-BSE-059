@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%- pageTitle || 'My App' %></title> <!-- Fallback title if pageTitle is not provided -->
+    
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="/styles.css">
+
+    <!-- Add any additional head elements here -->
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li class="<%= activeLink === '/' ? 'active' : '' %>">
+                <a href="/">Home</a>
+            </li>
+            <li class="<%= activeLink === '/products' ? 'active' : '' %>">
+                <a href="/products">Products</a>
+            </li>
+            <li class="<%= activeLink === '/test' ? 'active' : '' %>">
+                <a href="/test">Test</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <%- body %> <!-- Render dynamic content here -->
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <%= new Date().getFullYear() %> My App. All rights reserved.</p>
+    </footer>
+
+    <!-- Optional Scripts -->
+    <script src="/scripts.js"></script> <!-- Include your JS file here -->
+</body>
+</html>

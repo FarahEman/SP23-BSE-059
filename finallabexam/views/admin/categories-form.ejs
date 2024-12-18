@@ -1,0 +1,58 @@
+<h4>Create Category</h4>
+
+<form action="/admin/categories/create" method="post" enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="nameInput">Name</label>
+    <input
+      name="name"
+      type="text"
+      class="form-control"
+      id="nameInput"
+      placeholder="Enter Category Name"
+      required
+    />
+    <small id="nameHelp" class="form-text text-muted">Enter a unique name for the category.</small>
+  </div>
+
+  <div class="form-group">
+    <label for="descriptionInput">Description</label>
+    <textarea
+      name="description"
+      class="form-control"
+      id="descriptionInput"
+      placeholder="Enter Category Description"
+      required
+    ></textarea>
+    <small id="descriptionHelp" class="form-text text-muted">Provide a brief description of the category.</small>
+  </div>
+
+  <div class="form-group">
+    <label for="imageInput">Upload Image</label>
+    <input
+      name="image"
+      type="file"
+      class="form-control"
+      id="imageInput"
+      accept="image/*"
+      required
+    />
+    <small id="imageHelp" class="form-text text-muted">Upload an image to represent the category. Max size: 5MB.</small>
+  </div>
+
+  <div class="form-group">
+    <button type="submit" class="btn btn-info">Create Category</button>
+  </div>
+</form>
+
+<!-- Optional: Display error messages or success confirmation -->
+<% if (error) { %>
+  <div class="alert alert-danger mt-3">
+    <%= error %>
+  </div>
+<% } %>
+
+<% if (successMessage) { %>
+  <div class="alert alert-success mt-3">
+    <%= successMessage %>
+  </div>
+<% } %>

@@ -1,0 +1,263 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar-brand img {
+  height: 50px;
+}
+
+.navbar-nav .nav-item {
+  padding: 10px 15px;
+}
+
+.nav-link {
+  color: #333 !important;
+  font-weight: bold;
+}
+
+.search-bar input {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.search-bar button {
+  border-radius: 20px;
+  background-color: #ffd43b;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #f3c800;
+}
+
+/* Hero Section (Carousel) */
+#heroCarousel {
+  position: relative;
+}
+
+#heroCarousel img {
+  height: 100vh;
+  object-fit: cover;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #ffd43b;
+}
+
+/* Categories Section */
+.categories .card {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.categories .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.categories .card-img-top {
+  object-fit: cover;
+  height: 250px;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 40px 0;
+}
+
+footer h5 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer ul li {
+  margin: 10px 0;
+}
+
+footer ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
+footer .social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+footer .social-icons a:hover {
+  color: #ffd43b;
+}
+
+/* Quick Links Section */
+.quick-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.quick-links a {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.quick-links a:hover {
+  text-decoration: underline;
+}
+
+/* Pagination Styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination .page-item {
+  margin: 0 5px;
+}
+
+.pagination .page-link {
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pagination .page-link:hover {
+  background-color: #ffd43b;
+  color: white;
+}
+
+.pagination .active .page-link {
+  background-color: #ffd43b;
+  color: white;
+}
+
+.pagination .disabled .page-link {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Form Styling for Search, Filter, Sort */
+form {
+  margin-bottom: 20px;
+}
+
+form input,
+form select {
+  padding: 8px 12px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #ffd43b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #f3c800;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .navbar-brand img {
+    height: 40px;
+  }
+
+  .search-bar input {
+    width: 150px;
+  }
+
+  .categories .card {
+    margin-bottom: 15px;
+  }
+
+  .footer {
+    padding: 20px 0;
+  }
+
+  /* Form Inputs and Buttons */
+  form input,
+  form select,
+  form button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  /* Table Styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+
+  table th, table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+
+  /* Pagination on Small Screens */
+  .pagination {
+    flex-direction: column;
+  }
+
+  .pagination .page-item {
+    margin: 5px 0;
+  }
+}

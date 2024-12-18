@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%- pageTitle %></title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container-fluid">
+        <!-- Left links (e.g., Women, Men, Accessories) -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link <%= pageTitle === 'Women' ? 'active' : '' %>" href="#">Women</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link <%= pageTitle === 'Men' ? 'active' : '' %>" href="#">Men</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link <%= pageTitle === 'Accessories' ? 'active' : '' %>" href="#">Accessories</a>
+          </li>
+        </ul>
+
+        <!-- Logo (Center) -->
+        <a class="navbar-brand mx-auto" href="#">
+          <img src="/images/khaadi-logo.png" alt="Logo" />
+        </a>
+
+        <!-- Search bar and Right links -->
+        <form class="d-flex search-bar">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cart</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Carousel -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Library-Sites-KhaadiSharedLibrary/default/dw0d665f49/images/homepage/0.0-1shimmer-desktop-home-bannner-1920x1080-9s1.jpg"
+            class="d-block w-100"
+            alt="Banner 1"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Library-Sites-KhaadiSharedLibrary/default/dwd3846c5d/images/homepage/0.0-1winter-basic-desktop-home-bannner-1920x1080-11e7.jpg"
+            class="d-block w-100"
+            alt="Banner 2"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Library-Sites-KhaadiSharedLibrary/default/dwd4049583/images/homepage/0.0-1warm-style-desktop-home-bannner-1920x1080-CAPES.jpg"
+            class="d-block w-100"
+            alt="Banner 3"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Library-Sites-KhaadiSharedLibrary/default/dw895b3942/images/homepage/0.0.0-11-21-2024-desktop-home-bannner-1920x1080-fab.jpg"
+            class="d-block w-100"
+            alt="Banner 4"
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#heroCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#heroCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Categories Section -->
+    <section class="categories container my-5">
+      <div class="row">
+        <!-- Women's Wear -->
+        <div class="col-md-4 mb-4">
+          <div class="card category-card">
+            <img
+              src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw550ad598/images/hi-res/ess24600b_green_1.jpg?sw=400&sh=600"
+              class="card-img-top category-img"
+              alt="Women"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Women's Wear</h5>
+              <a href="#" class="btn btn-warning">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <!-- Home Cushions -->
+        <div class="col-md-4 mb-4">
+          <div class="card category-card">
+            <img
+              src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw11bd2ab1/images/hi-res/hccc240915_multi_2.jpg?sw=400&sh=600"
+              class="card-img-top category-img"
+              alt="Home Cushions"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Home Cushions</h5>
+              <a href="#" class="btn btn-warning">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <!-- Fragrances -->
+        <div class="col-md-4 mb-4">
+          <div class="card category-card">
+            <img
+              src="https://pk.khaadi.com/on/demandware.static/-/Library-Sites-KhaadiSharedLibrary/default/dw61f378bc/images/0.0-0.0-0.0-0.0-4.4-24-promo.gif"
+              class="card-img-top category-img"
+              alt="Fragrances"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Fragrances</h5>
+              <a href="#" class="btn btn-warning">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-4">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white">About Us</a></li>
+              <li><a href="#" class="text-white">Careers</a></li>
+              <li><a href="#" class="text-white">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>Contact Us</h5>
+            <p>Email: info@khaadi.com</p>
+            <p>Phone: +92-300-1234567</p>
+          </div>
+          <div class="col-md-4">
+            <h5>Follow Us</h5>
+            <div>
+              <a href="#" class="text-white me-3"><i class="fab fa-facebook fa-2x"></i></a>
+              <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-2x"></i></a>
+              <a href="#" class="text-white"><i class="fab fa-twitter fa-2x"></i></a>
+            </div>
+          </div>
+        </div>
+        <hr class="my-4" />
+        <p>&copy; 2024 Khaadi Pakistan. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

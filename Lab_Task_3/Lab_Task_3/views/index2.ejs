@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khaadi Homepage</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+      <div class="container-fluid d-flex justify-content-between align-items-center">
+        <a class="navbar-brand mx-2" href="https://pk.khaadi.com/">
+          <img class="img-fluid" src="/images/khaadi-logo.png" alt="Khaadi Logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="https://pk.khaadi.com/">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="https://pk.khaadi.com/ready-to-wear"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Ready to Wear
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="https://pk.khaadi.com/ready-to-wear/casuals">Casuals</a></li>
+                <li><a class="dropdown-item" href="https://pk.khaadi.com/ready-to-wear/smart-casuals">Smart Casuals</a></li>
+                <li><a class="dropdown-item" href="https://pk.khaadi.com/ready-to-wear/essentials">Essentials</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://pk.khaadi.com/sale">Sale</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://pk.khaadi.com/new-arrivals">New Arrivals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://pk.khaadi.com/contact-us">Contact Us</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search for products, categories, or collections"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+            <a href="#" class="btn btn-outline-dark ms-2">
+              <i class="fas fa-shopping-cart"></i> Cart
+            </a>
+            <a href="#" class="btn btn-warning ms-2">My Account</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/images/hero1.webp" class="d-block w-100" alt="Sale Banner" />
+            <div class="carousel-caption text-start">
+              <h5>Winter Collection</h5>
+              <p>Discover our vibrant and stylish winter designs.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/images/hero2.webp" class="d-block w-100" alt="New Collection" />
+            <div class="carousel-caption text-center">
+              <h5>New Arrivals</h5>
+              <p>Fresh styles for the new season.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/images/hero3.webp" class="d-block w-100" alt="Seasonal Picks" />
+            <div class="carousel-caption text-end">
+              <h5>Seasonal Picks</h5>
+              <p>Timeless trends to suit every occasion.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" aria-label="Previous">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" aria-label="Next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </section>
+    
+
+    <!-- Featured Categories -->
+    <section class="categories py-5">
+      <div class="container text-center">
+        <h2>Featured Categories</h2>
+        <div class="row mt-4">
+          <!-- Category 1: Casuals -->
+          <div class="col-md-4">
+            <img 
+              src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Library-Sites-KhaadiSharedLibrary/default/dwd4e17b3c/images/homepage/0.0-1casuals-desktop-home-bannner-1920x1080-14e9.jpg" 
+              alt="Casual Wear Collection" 
+              class="img-fluid" 
+            />
+            <h4>Casuals</h4>
+          </div>
+    
+          <!-- Category 2: Smart Casuals -->
+          <div class="col-md-4">
+            <img 
+              src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Library-Sites-KhaadiSharedLibrary/default/dwd45dbdf1/images/homepage/0.0-1smart-casuals-desktop-home-bannner-1920x1080-CAPES.jpg" 
+              alt="Smart Casual Wear Collection" 
+              class="img-fluid" 
+            />
+            <h4>Smart Casuals</h4>
+          </div>
+    
+          <!-- Category 3: Sale -->
+          <div class="col-md-4">
+            <img 
+              src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Library-Sites-KhaadiSharedLibrary/default/dwd4e17b3c/images/homepage/0.0-1sale-desktop-home-bannner-1920x1080-14e9.jpg" 
+              alt="Exclusive Sale Offers" 
+              class="img-fluid" 
+            />
+            <h4>Sale</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- Product Filters & Grid -->
+    <section class="product-filters py-5">
+      <div class="container">
+        <h3>Filter Products</h3>
+        <div class="row">
+          <div class="col-md-3">
+            <h5>Categories</h5>
+            <ul class="list-unstyled">
+              <li><input type="checkbox" id="casuals" /> <label for="casuals">Casuals</label></li>
+              <li><input type="checkbox" id="smart-casuals" /> <label for="smart-casuals">Smart Casuals</label></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5>Size</h5>
+            <ul class="list-unstyled">
+              <li><input type="checkbox" id="sizeS" /> <label for="sizeS">S</label></li>
+              <li><input type="checkbox" id="sizeM" /> <label for="sizeM">M</label></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5>Price Range</h5>
+            <ul class="list-unstyled">
+              <li><input type="checkbox" id="price1" /> <label for="price1">$0 - $50</label></li>
+              <li><input type="checkbox" id="price2" /> <label for="price2">$51 - $100</label></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="product-grid py-5">
+      <div class="container">
+        <h2>Featured Products</h2>
+        <div class="row">
+          <!-- Product Item 1: Casual Shirt -->
+          <div class="col-md-3 product-item" data-category="Casuals" data-price="30">
+            <div class="card">
+              <img src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw18f8e3a4/images/hi-res/est24601b_turquoise_1.jpg?sw=400&sh=600" alt="Product Image" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Embroidered Raw Silk</h5>
+                <p class="card-text">$30</p>
+              </div>
+            </div>
+          </div>
+          <!-- Product Item 2: Smart Casuals -->
+          <div class="col-md-3 product-item" data-category="Smart Casuals" data-price="40">
+            <div class="card">
+              <img src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw3834b6e6/images/hi-res/est24606a_white_1.jpg?sw=400&sh=600" alt="Smart Casual Shirt" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Embroidered White Kurta</h5>
+                <p class="card-text">$40</p>
+              </div>
+            </div>
+          </div>
+          <!-- Product Item 3: Summer Dress -->
+          <div class="col-md-3 product-item" data-category="Women" data-price="25">
+            <div class="card">
+              <img src="https://pk.khaadi.com/on/demandware.static/-/Library-Sites-KhaadiSharedLibrary/default/dwb4f22d9c/images/megamenu/0.0-1shimmer-promo.gif" alt="Summer Dress" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Formal Raw Silk Festive</h5>
+                <p class="card-text">$25</p>
+              </div>
+            </div>
+          </div>
+          <!-- Product Item 4: Formal Pants -->
+          <div class="col-md-3 product-item" data-category="Formal" data-price="50">
+            <div class="card">
+              <img src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw5b4225e1/images/hi-res/eeb24773a_multi_1.jpg?sw=400&sh=600" alt="Formal Pants" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Dyed Khaddar Pants</h5>
+                <p class="card-text">$50</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section class="newsletter py-5 bg-light">
+      <div class="container text-center">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Stay updated with our latest collections and exclusive offers.</p>
+        <form class="d-flex justify-content-center mt-3">
+          <input
+            type="email"
+            class="form-control w-50 me-2"
+            placeholder="Enter your email to stay updated"
+            required
+          />
+          <button type="submit" class="btn btn-primary">Sign Up Now</button>
+        </form>
+      </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container text-center">
+        <h5>Contact Us</h5>
+        <p>Email: support@yourwebsite.com | Phone: +1 (800) 123-4567</p>
+        <ul class="list-unstyled">
+          <li><a href="/about-us">About Us</a></li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+        </ul>
+        <div class="social-icons">
+          <a href="https://facebook.com/yourprofile"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/yourprofile"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/yourprofile"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
