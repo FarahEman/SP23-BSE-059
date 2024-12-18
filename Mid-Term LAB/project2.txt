@@ -1,0 +1,18 @@
+Project Title: Rental Management System
+Semester: 2
+Description:
+The Rental Management System is an object-oriented programming project developed in Java, aimed at managing rental properties efficiently. The system includes functionalities for adding, updating, deleting, and viewing rental listings. It also features user authentication for landlords and tenants, enabling them to manage their profiles. The main functionalities are:
+- Landlord can add and manage their properties
+- Tenants can search for available rentals based on criteria
+- Booking management system to handle tenant requests
+- Reporting feature to generate rental income reports
+
+Technologies Used:
+- Java
+- MySQL (for database management)
+- JDBC (for database connectivity)
+
+Key Learnings:
+- Application of OOP principles in real-world scenarios
+- Experience with database management and connectivity
+- Understanding of user authentication processes

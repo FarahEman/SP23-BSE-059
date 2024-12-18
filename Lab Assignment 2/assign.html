@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Operations with API</title>
+    <link href="https://fonts.googleapis.com/css2?family=Arial&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assign.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>CRUD Operations</h1>
+        <div class="button-group">
+            <button class="btn" onclick="toggleSection('create')">Create User</button>
+            <button class="btn" onclick="fetchUsers()">View Users</button>
+            <button class="btn" onclick="toggleSection('update')">Update User</button>
+            <button class="btn" onclick="toggleSection('delete')">Delete User</button>
+        </div>
+
+        <!-- Create User -->
+        <div id="create" class="form-section" style="display:none;">
+            <input id="createName" class="input-field" placeholder="Name" required>
+            <input id="createEmail" class="input-field" placeholder="Email" required>
+            <button class="btn" onclick="createUser()">Create</button>
+            <div id="createResponse" class="response-message"></div>
+        </div>
+
+        <!-- Update User -->
+        <div id="update" class="form-section" style="display:none;">
+            <input id="updateId" class="input-field" placeholder="User ID" required>
+            <input id="updateName" class="input-field" placeholder="New Name" required>
+            <input id="updateEmail" class="input-field" placeholder="New Email" required>
+            <button class="btn" onclick="updateUser()">Update</button>
+            <div id="updateResponse" class="response-message"></div>
+        </div>
+
+        <!-- Delete User -->
+        <div id="delete" class="form-section" style="display:none;">
+            <input id="deleteId" class="input-field" placeholder="User ID" required>
+            <button class="btn" onclick="deleteUser()">Delete</button>
+            <div id="deleteResponse" class="response-message"></div>
+        </div>
+
+        <!-- View Users -->
+        <div id="userList" class="user-list d-none"></div>
+    </div>
+    <script src="first.js"></script>
+</body>
+</html>
